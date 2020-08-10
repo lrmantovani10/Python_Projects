@@ -1,0 +1,126 @@
+MyManager:
+    M_Page:
+    Page:
+<M_Page>
+    name:"M_Page"
+    orientation: "vertical"
+    SearchWindow:
+        name:"SearchWindow"
+        myinput:myinput  
+        RelativeLayout:
+            Image:
+                source:"W_S.png"
+                size_hint:8,8
+                pos:0,-175
+            Label: 
+                font_size: '25sp'
+                font_context:'None'
+                font_family:'Helvetica'
+                color: 1,0,0,1
+                text: "Welcome to GDP Tracker!!!"
+                bold:True
+                size_hint:None,None
+                pos:350,350
+            Label: 
+                font_size: '22sp'
+                font_family:"Helvetica"
+                font_context:'None'
+                color: 1,0,0,1
+                text: "Search for global GDPs"
+                bold:True
+                size_hint:None,None
+                pos:350,300
+            TextInput:
+                id:myinput
+                multiline: False
+                font_name:"Arial"
+                hint_text:"Country:"
+                focus:True
+                size_hint:None,None
+                height:30
+                width:200
+                pos:300,275
+            
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 210
+                background_color:1.5,0,0,0.9
+                text:"Search"
+                on_press:self.parent.parent.submit()
+<Page>
+    name:"Page"
+    orientation: "vertical"
+    Wind:
+        RelativeLayout:
+            Image:
+                source:"W_S.png"
+                size_hint:8,8
+                pos:0,-175
+            Label: 
+                id:lbl
+                font_size: '22sp'
+                font_family:"Helvetica"
+                font_context:'None'
+                color: 1,0,0,1
+                bold:True
+                size_hint:None,None
+                pos:350,350
+                text: (root.Wind().Wind().c)+' Data'
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 315
+                background_color:1.5,0,0,0.9
+                text:"1970-1979"
+                on_press:self.parent.parent.d('1970-1979',0,'','red','blue','')
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 265
+                background_color:1.5,0,0,0.9
+                text:"1980-1989"
+                on_press:self.parent.parent.d('1980-1989',1,1,'blue','red','')
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 215
+                background_color:1.5,0,0,0.9
+                text:"1990-1999"
+                on_press:self.parent.parent.d('1990-1999',2,2,'yellow','green','')
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 165
+                background_color:1.5,0,0,0.9
+                text:"2000-2010"
+                on_press:self.parent.parent.d('2000-2009',3,3,'green','yellow','')
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 115
+                background_color:1.5,0,0,0.9
+                text:"2010-2019"
+                on_press:self.parent.parent.d('2010-2019',4,4,'orange','purple','')
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 325, 65
+                background_color:1.5,0,0,0.9
+                text:"2020-2024"
+                on_press:self.parent.parent.d('2020-2024',5,5,'purple','orange', 'Projections')
+            Button:
+                size_hint:None,None
+                width:150
+                height:30
+                pos: 120, 370
+                background_color:1.5,0,0,0.9
+                text:"Back"
+                on_press:self.parent.parent.tr()
