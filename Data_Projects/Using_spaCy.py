@@ -91,7 +91,7 @@ test_x_vectors = vectorizer.transform(test_x)
 train_x_vectors1 = vec1.fit_transform(train_x)
 test_x_vectors1 = vec1.transform(test_x)
 
-if not os.path.exists('./Image_Recognition/Classifier_Saved.pkl'):
+if not os.path.exists('./Projects/Classifier_Saved.pkl'):
     clf = ComplementNB()
     #Saving Model
     with open('Classifier_Saved.pkl', 'wb') as file:
