@@ -47,7 +47,8 @@ class Arrange:
 
 
 def get_words(m_f):
-    #Very simple text correcter for Python
+    #Very simple text correcter for Python - this can be substituted for
+    # Sympspellpy or removed to significantly decrease compiling time.
     spell = Speller(lang='en')
     with open(m_f) as f:
         for line in f:
