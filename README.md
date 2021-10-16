@@ -1,1 +1,1 @@
-Collection of some of my personal Python projects.
+Collection of some of my Python personal projects.
